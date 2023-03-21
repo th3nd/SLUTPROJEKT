@@ -7,22 +7,34 @@ current_block = 0;
 
 function submit() {
     const content = document.querySelector('#content');
-    const err = document.querySelector('#error');
 
     const feed = document.querySelector('.feed');
 
     if (!content.value) {
-        err.style.display = 'block';
+        content.placeholder = 'content is missing a value';
     }   else {
-        err.style.display = 'none';
         menu_state(false);
         // inte de bästa sättet
-        feed.innerHTML += "<div class='block' onclick='select("+current_block+")' id='"+current_block+"'><p>"+content.value+"</p></div>";
+        feed.innerHTML += "<div class='block' onclick='select("+current_block+")' id='"+current_block+"'><p>"+content.value+"</p><img width=20 src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iOTMtYmluIiBpZD0iXzkzLWJpbiI+PHJlY3QgY2xhc3M9ImNscy0xIiBoZWlnaHQ9IjIyIiB3aWR0aD0iMTgiIHg9IjciIHk9IjkiLz48cmVjdCBjbGFzcz0iY2xzLTEiIGhlaWdodD0iNCIgd2lkdGg9IjIyIiB4PSI1IiB5PSI1Ii8+PHBvbHlsaW5lIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxMiA1IDEyIDEgMjAgMSAyMCA1Ii8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMTMiIHgyPSIxMyIgeTE9IjE0IiB5Mj0iMzEiLz48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIxOSIgeDI9IjE5IiB5MT0iMTQiIHkyPSIzMSIvPjwvZz48L3N2Zz4='</div>";
+        content.value = '';
         current_block++;
     }
 }
 
+let blocks = []
 function select(a) {
     const block = document.getElementById(a);
-    block.style.backgroundColor = 'red';
+
+    if (!blocks[a]) {
+        block.style.backgroundColor = 'rgb(200, 200, 200)';
+        block.style.color = 'rgb(75, 75, 75)';
+        block.style.textDecoration = 'line-through';
+    } else {
+        block.style.backgroundColor = 'rgb(255, 255, 255)';
+        block.style.color = 'rgb(50, 50, 50)';
+        block.style.textDecoration = 'none';
+    }
+
+
+    blocks[a] = !blocks[a];
 }

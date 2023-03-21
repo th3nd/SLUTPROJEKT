@@ -98,13 +98,12 @@ textarea {
 
 #submit {
     display: block;
-    position: absolute;
-    right: flex-end;
-    bottom: 0;
-
-    width: 50px;
+    position: relative;
+    margin-left: auto;
+    
+    width: 100px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 25px;
     background: #6b77ff;
     border: #6b77ff 1px solid;
     border: none;
@@ -120,25 +119,30 @@ textarea {
     background: #5a63cf;
 }
 
-#error {
-    display: none;
-    color: red;
-    text-align: center;
-    font-size: small;
-}
-
 /* feed*/
 
 .feed {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .block {
     border: rgb(206, 206, 206) 2px solid;
+    color: rgb(50, 50, 50);
     border-radius: 5px;
     width: 200px;
     padding: 1rem;
     margin: 2rem;
+
+    display: flex;
+}
+
+.block *:nth-child(2) {
+    margin-left: auto;
+}
+
+.block:hover {
+    cursor: pointer;
 }
 
 .block h1 {
