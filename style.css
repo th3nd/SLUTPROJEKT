@@ -139,6 +139,11 @@ textarea {
 
 .block *:nth-child(2) {
     margin-left: auto;
+    opacity: .5;
+}
+
+.block *:nth-child(2):hover {
+    opacity: 1;
 }
 
 .block:hover {
@@ -151,3 +156,4 @@ textarea {
     margin-bottom: 10px;
     width: fit-content;
 }
+

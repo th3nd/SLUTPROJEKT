@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+
+/* global styling */
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(50, 50, 50);
+    overflow-x: hidden;
+}
+
+.content {
+    position: relative;
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content * {
+    flex: 1;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-left: 8rem;
+}
+
+.img-c {
+    height: 100vh;
+    width: 50vw;
+}
+
+.img-bg {
+    background: #0F0D27;
+    height: 200vh;
+    width: 100vw;
+    transform: rotate(-15deg) translate(0, -15rem);
+    z-index: -1;
+    animation: slow-in 1s ;
+    opacity: 1;
+}
+
+.img {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    top: 50vh;
+    /* eftersom right: 6rem inte funkar :) */
+    left: calc(100vw - 250px - 8rem);
+    translate: 0 -50%;
+
+    opacity: 1;
+    animation: fade-in 1s 1s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes slow-in {
+    from {
+        transform: rotate(0deg) translate(50rem, -15rem);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+
+.more,
+.try {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(247, 247, 247);
+}
+
+.more {
+    font-size: 3rem;
+    font-weight: 700;
+    right: 8rem;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+
+.more * {
+    flex: 1;
+    width: fit-content;
+    margin: auto;
+}
+
+.info h2 {
+    text-align: right;
+}
+
+.info ul {
+    list-style: none;
+    font-size: 1.8rem;
+    color: rgba(50, 50, 50, .8);
+    text-align: left;
+}
+
+.info li {
+    text-align: left;
+}
+
+.try-c {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background: rgb(229, 229, 229);
+
+}
+
+.try-c h2 {
+    font-size: 4rem;
+}
+
+.try-c button {
+    font-size: 5rem;
+    font-weight: 700;
+    padding: 2rem 3rem;
+    border: 2px solid #7682ff;
+    border-radius: 5px;
+    background: #6b77ff;
+    color: #00000024;
+    margin-top: 2rem;
+
+    text-transform: uppercase;
+    transition: 200ms;
+}
+
+.try-c button:active {
+    background: #8892ff;
+}
+
+.try-c button:hover {
+    color: #00000083;
+}
+
+.divider {
+    position: absolute;
+    width: 10px;
+    height: 20rem;
+    background: #d8d8d8;
+    top: 50vh;
+    left: 50vw;
+    translate: -50% -50%;
+}
