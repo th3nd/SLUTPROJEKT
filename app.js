@@ -50,6 +50,7 @@ function select(a) {
 function delete_block(a) {
     const block = document.getElementById(a);
     block.style.display = 'none';
+    save_notes()
 }
 
 

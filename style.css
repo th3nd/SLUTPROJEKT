@@ -16,22 +16,39 @@ body {
 header {
     position: relative;
     width: 100vw;
-    background: #6b77ff;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
+header p {
+    margin-top: 2rem;
+    margin-right: .5rem;
+
+    color: rgb(50, 50, 50);
+}
 
 /* button */
 #add {
-    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PGcgZGF0YS1uYW1lPSJMYXllciAyIiBpZD0iTGF5ZXJfMiI+PHBhdGggZD0iTTI4LDI4LjVINGEuNS41LDAsMCwxLS41LS41VjRBLjUuNSwwLDAsMSw0LDMuNUgyOGEuNS41LDAsMCwxLC41LjVWMjhBLjUuNSwwLDAsMSwyOCwyOC41Wm0tMjMuNS0xaDIzVjQuNUg0LjVaIi8+PHBhdGggZD0iTTIyLDE2LjVIMTBhLjUuNSwwLDAsMSwwLTFIMjJhLjUuNSwwLDAsMSwwLDFaIi8+PHBhdGggZD0iTTE2LDIyLjVhLjUuNSwwLDAsMS0uNS0uNVYxMGEuNS41LDAsMCwxLDEsMFYyMkEuNS41LDAsMCwxLDE2LDIyLjVaIi8+PC9nPjwvc3ZnPg==");
+    align-self: flex-end;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABcklEQVRoQ+2WPUpEQRCEdwPNRBNTwVwQDXQDhT2CmXgNAzNBwUzBO+glNhP8NxDMRTyAkaEI4jdGE+yT6p036IMSCgatbquq27X7vY5/9Tuuv2cDfz1BT8ATKEzAK1QYYHF5zQlMo24JvID3YqUNDWoZmOL3XYIBeAPr4LWGiVoG1hD7kAne433cJQNDxF5kgg95H9jAmARqrZAnoK6bJ9CQlFfIK6Qm0KUVSrfNCpgRzC3DOcl457zPhLpPOE9Avp3UT6H8thF0FFFCt5NqYBVJj0WyYsW70E+VEtXALM2ewbzStJDzRf0muFX6qAZSr0WwDeaExgtwdjLeDe9roe4DzgjcCdwfSsSA2jPxhsDXqJKYJ9CQkldIWR//Ef+SklfIK6Qm0MDb4PtX2c/2eR8V9hxbXuv/QH47hW6bqMlaBpKOdDttgfvIbfOfDES1TMSvOYGJBEWLbCCaWNt8T6DtRKP9PIFoYm3zPYG2E432+wb7l0QxwfREKwAAAABJRU5ErkJggg==");
+    background-color: #a59c30;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    filter: invert(100%);
+
+    margin-top: 2rem;
+    margin-right: 2rem;
 }
 #close {
     background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PGcgZGF0YS1uYW1lPSJMYXllciAyIiBpZD0iTGF5ZXJfMiI+PHBhdGggZD0iTTI3Ljk0LDI4LjQ0aC0yNGEuNS41LDAsMCwxLS41LS41di0yNGEuNS41LDAsMCwxLC41LS41aDI0YS41LjUsMCwwLDEsLjUuNXYyNEEuNTEuNTEsMCwwLDEsMjcuOTQsMjguNDRabS0yMy41LTFoMjN2LTIzaC0yM1oiLz48cGF0aCBkPSJNMjIsMTYuNDlIMTBhLjUuNSwwLDAsMSwwLTFIMjJhLjUuNSwwLDEsMSwwLDFaIi8+PC9nPjwvc3ZnPg==");
 }
 #add,
 #close {
-    width: 32px;
-    height: 32px;
-    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
 }
 /* conditionals */
 #add:hover,
